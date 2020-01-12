@@ -47,7 +47,7 @@ function loadGoods(elem) { //загрузка товаров
             out += "<div data-art='" + arr[key].index + "'><p class='name'>" + arr[key].name + "</p>";
             out += "<p class='short-description'>" + arr[key].shortDescription +"</p>";
             out += "<img src = '" + arr[key].img[0] + "'>";
-            out += "<p class='price'>" + arr[key].price + " &#8381;</p></div>"; 
+            out += "<p class='price'>" + arr[key].price + " \u20BD</p></div>"; 
             out += "<button class = 'add-to-cart' data-art='" + arr[key].index + "'>Добавить в корзину</button></div>";
         }
         if (out === "") {
@@ -100,7 +100,7 @@ function firstLoadGoods() { //загрузка товаров
             out += "<div data-art='" + data[key].index + "'><p class='name'>" + data[key].name + "</p>";
             out += "<p class='short-description'>" + data[key].shortDescription +"</p>";
             out += "<img src = '" + data[key].img[0] + "'>";
-            out += "<p class='price'>" + data[key].price + " &#8381;</p>";
+            out += "<p class='price'>" + data[key].price + " \u20BD</p>";
             out += "</div><button class = 'add-to-cart' data-art='" + data[key].index + "'>Добавить в корзину</button>";
             out += "</div>";
         }
@@ -165,7 +165,7 @@ function getDetailedGoodModal() {
             out += "<li class='dots-item'></li>";
         }
         out += "</ul></div>";
-        out+= "<div><p>" + good.price + " &#8381;</p>";
+        out+= "<div><p>" + good.price + " \u20BD</p>";
         out += "<button class = 'inside-add-to-cart' data-art='" + good.index + "'>Добавить в корзину</button></div></div>";
         out += "<p class='description'>" + good.description + "</p>";
         $('#detailed-good').html(out);
@@ -200,7 +200,7 @@ function showCart() {
                 out += "<td>" + index + "</td>";
                 out += "<td><img class = 'cartImage' src='" + goods[key].img[0] + "'></td>";
                 out += "<td><span class ='goodsName' data-art = '" + key + "'>" + goods[key].name + "</span></td>";
-                out += "<td>" + cart[key] * goods[key].price + " &#8381;</td>";
+                out += "<td>" + cart[key] * goods[key].price + " \u20BD</td>";
                 out += "<td><button class = 'minus' data-art = '" + key + "'>-</button> ";
                 out += cart[key];
                 out += " <button class = 'plus' data-art = '" + key + "'>+</button></td>";
@@ -208,7 +208,7 @@ function showCart() {
                 summary += cart[key] * goods[key].price;
             }
             $('#cart-table').append(out);
-            $('#summary').html("Общая сумма заказа: " + summary + " &#8381;");
+            $('#summary').html("Общая сумма заказа: " + summary + " \u20BD");
             $('.plus').on('click', plusGoods);
             $('.minus').on('click', minusGoods);
             $("#clearCart").on('click', clearCart);
