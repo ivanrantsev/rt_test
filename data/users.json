@@ -1,0 +1,27 @@
+{
+    "1" : {
+        "login": "John",
+        "email": "qqq@qqq.qq",
+        "password": "qqqqqq"
+    },
+    "2" : {
+        "login": "Sam",
+        "email": "aaa@aaa.aa",
+        "password": "aaaaaa"
+    },
+    "3" : {
+        "login": "Tom",
+        "email": "zzz@zzz.zz",
+        "password": "zzzzzz"
+    },
+    "4" : {
+        "login": "Jack",
+        "email": "www@www.ww",
+        "password": "wwwwww"
+    },
+    "5" : {
+        "login": "James",
+        "email": "sss@sss.ss",
+        "password": "ssssss"
+    }
+}

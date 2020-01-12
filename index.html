@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Интернет-магазин компьютерной техники</title>
+    </head>
+    <body>
+
+        
+        <nav class="navmenu">
+            
+                <div class = "container">
+                    <input class="navmenu__check" type="checkbox" id="showmenu"/>
+                    <label class="navmenu__showmenu" for="showmenu">&#9776;</label>
+                    <label class="navmenu__showmenu__close" for="showmenu">&#10060;</label>
+                    <ul class="navmenu__toggler-menu">
+                        <li class="toggler-menu__item topmenu toggler-menu__item_is-active"><a id="catalog" class="toggler-menu__item__link" href="#">Каталог</a>
+                            <ul class="submenu">
+                                <li id="component"><a class="catalog-top-section" href="#">Комплектующие</a>
+                                    <ul class="submenu">
+                                        <li class="catalog-section" id="CPU">Процессоры</li>
+                                        <li class="catalog-section" id="HDD">Жесткие диски</li class="catalog-section">
+                                        <li class="catalog-section" id="videocards">Видеокарты</li class="catalog-section">
+                                    </ul>
+                                </li>
+                                <li id="peripherals"><a class="catalog-top-section" href="#">Компьютерная периферия</a>
+                                    <ul class="submenu">
+                                        <li id="input-devices"><a class="catalog-top-section" href="#">Устройства ввода</a>
+                                            <ul class="submenu">
+                                                <li class="catalog-section" id="mouses">Мыши</li class="catalog-section">
+                                                <li class="catalog-section" id="keyboards">Клавиатуры</li class="catalog-section">
+                                                <li class="catalog-section" id="gamepads">Геймпады</li class="catalog-section">
+                                            </ul>
+                                        </li>
+                                        <li class="catalog-section" id="displays">Мониторы</li class="catalog-section">
+                                        <li class="catalog-section" id="printers">Принтеры, МФУ, сканеры</li class="catalog-section">
+                                    </ul>
+                                </li>
+                                <li id="storage-devices"><a class="catalog-top-section" href="#">Аксессуары</a>
+                                    <ul class="submenu">
+                                        <li class="catalog-section" id="external-HDD">Наушники</li class="catalog-section">
+                                        <li class="catalog-section" id="USB">Колонки</li class="catalog-section">
+                                        <li class="catalog-section" id="flashcards">Карты памяти</li class="catalog-section">
+                                    </ul>
+                                
+                            </ul>
+                        </li>
+                        <li class="toggler-menu__item"><a class="toggler-menu__item__link" href="#">Доставка</a></li>
+                        <li class="toggler-menu__item"><a class="toggler-menu__item__link" href="#">Наши магазины</a></li>
+                        <li class="toggler-menu__item__space"></li>
+                        <li class="toggler-menu__item toggler-menu__item__link" id='get-login-modal'>Войти</li>
+                    </ul>
+                    <p class="toggler-menu__item toggler-menu__item__link" id="get-cart-modal"><img src="img/supermarket.svg"><span id='mini-cart'></span></p>
+                </div>
+        </nav>
+
+         <!----MODAL WINDOWS---->
+        <div id="cart-modal">
+            <div class="overlay modal-close"></div>
+            <div class = "modal-window">
+                <p class="modal-close modal-close-button">&#10060;</p>
+                <h1>Корзина</h1>
+                <p id="empty-cart"></p>
+                <table id = "cart">
+                    <tbody id="cart-table">
+                    </tbody>
+                </table>
+                <p id = "summary">Общая сумма заказа: <span></span></p>
+                <div id="cart-modal-buttons">
+                    <button>Оформить заказ</button>
+                    <button id='clearCart'>Очистить корзину</button>
+                    <button id='deleteSelected'>Удалить выбранные товары</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="login-modal">
+            <div class="overlay modal-close"></div>
+            <div class = "modal-window">
+                <p class="modal-close modal-close-button">&#10060;</p>
+                <p id="errorLogin">Неверный email или пароль</p>
+                <form class="flex-center">
+                    <label for="login-email">Введите email</label>
+                    <input id='login-email' type="email">
+                    <br>
+                    <label for="login-password">Введите пароль</label>
+                    <input id='login-password' type="password">
+                    <button id='login-button'>Войти</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="good-modal">
+            <div class="overlay modal-close"></div>
+            <div class = "modal-window">
+                <p class="modal-close modal-close-button">&#10060;</p>
+                <div id="detailed-good">
+
+                </div>
+            </div>
+        </div>
+<!----------------------->
+
+
+        <main>
+            <div class="container">
+                <div>
+                    <h2 id="header"></h2>
+                    <div id="goods"></div>
+                </div>
+            </div>
+        </main>
+
+
+       
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    </body>
+</html>
